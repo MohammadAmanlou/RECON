@@ -1,0 +1,246 @@
+% RECON-OMEGA preliminary evidence report; reproducible analysis of recorded synthetic and modular-neural assays.
+% Figures: python make_figures.py --repo-root ../.. --out figures
+% Compile: latexmk -pdf main.tex
+\documentclass[10.5pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{booktabs,tabularx,array,multirow,amsmath,amssymb,graphicx,microtype,enumitem,caption,float,needspace,threeparttable}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor,fancyhdr,lastpage}
+\usepackage[colorlinks=true,linkcolor=teal!65!black,urlcolor=teal!60!black]{hyperref}
+\hypersetup{pdftitle={RECON-Omega: Preliminary Experimental Evidence and Critical Analysis},pdfauthor={Mohammad Amanlou},pdfsubject={Research pilot evidence report; synthetic and small modular trained neural experiments}}
+\definecolor{navy}{HTML}{13293D}
+\definecolor{teal}{HTML}{0A827A}
+\definecolor{orange}{HTML}{BD742F}
+\definecolor{red}{HTML}{A9454D}
+\definecolor{slate}{HTML}{5C6C7A}
+\definecolor{pale}{HTML}{F1F6F8}
+\definecolor{line}{HTML}{DCE7EC}
+\color{navy}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\footnotesize RECON-$\Omega$ \textbar\ Preliminary evidence audit}
+\fancyhead[R]{\footnotesize Mohammad Amanlou}
+\fancyfoot[C]{\footnotesize Page \thepage\ of \pageref{LastPage}}
+\renewcommand\headrulewidth{.3pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlist[itemize]{leftmargin=1.5em,itemsep=2pt,topsep=2pt}
+\renewcommand\arraystretch{1.15}
+\captionsetup{font=small,labelfont=bf,skip=5pt}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\fig}[3]{\begin{figure}[H]\centering\includegraphics[width=#1\linewidth]{figures/#2.pdf}\caption{#3}\end{figure}}
+\newcommand{\sig}[1]{\textcolor{teal}{\textbf{#1}}}
+\newcommand{\risk}[1]{\textcolor{red}{\textbf{#1}}}
+\newtcolorbox{resultbox}[1][]{colback=pale,colframe=line,boxrule=.5pt,arc=2mm,left=9pt,right=9pt,top=7pt,bottom=7pt,#1}
+\begin{document}
+\thispagestyle{plain}
+{\sffamily\footnotesize RESEARCH EVIDENCE REPORT\hfill 19 NOVEMBER 2026}\par\vspace{3mm}\hrule height .8pt\vspace{6mm}
+{\fontsize{23}{27}\selectfont\bfseries RECON-$\Omega$:\\ Preliminary Experimental Evidence\par}
+\vspace{2mm}
+{\large \textcolor{teal}{A visual, reproducible assessment of whether causal competence discovery is worth pursuing}\par}
+\vspace{4mm}
+{\large \textbf{Mohammad Amanlou}\par}
+{\small Supporting artifact for the RECON-$\Omega$ doctoral research proposal and the \href{https://github.com/MohammadAmanlou/RECON}{RECON research repository}.\par}
+\vspace{4mm}
+\begin{resultbox}
+\textbf{Executive conclusion}\quad \sig{Promising enough for a rigorous next-stage study, not yet evidence of a novel general-purpose LLM method.}
+
+A fully controlled synthetic pilot recovers higher-order shared interactions with mean F1 \textbf{0.943} under a fixed D-optimal packet design compared with \textbf{0.822} for random packets (12 calibrated worlds per method in the adversarial suite). The paired gain is \textbf{+0.121} with a world-bootstrap 95\% interval \textbf{[+0.029, +0.237]}. A separate originally executed 12-world pilot found F1 \textbf{0.976 versus 0.799}, under a different run setup. These results justify further investigation \emph{within the planted calibration regime}.
+
+The same audit finds important failures: a weak-effect stress causes near-zero support F1, the exploratory adaptive method trails fixed D-optimal in most conditions, and a small trained PyTorch learner recovers masked performance without gradient updates. These are scientifically useful counterexamples against overclaiming causal recovery or machine unlearning.
+\end{resultbox}
+\vspace{2mm}
+\begin{center}\renewcommand\arraystretch{1.2}
+\begin{tabularx}{\linewidth}{>{\bfseries\color{teal}}p{.24\linewidth}Y}
+\toprule
+Evidence available & 12-world first pilot; five-scenario $12\times 3$ robustness comparisons; 48 independent synthetic edge confirmations; oracle-calibrated fourth-action falsification; 8-seed actual PyTorch modular training.\\
+Evidence absent & No pretrained LLM intervention study; no verified language-model skill circuits; no general human learning claim; no theorem validated on real neural noncompliance.\\
+Interpretation & Technical proof of concept and falsifiable experimental infrastructure, \emph{not} SOTA validation, best-paper evidence, or a guaranteed publication outcome.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+\vspace{2mm}
+\fig{.90}{01_pilot_support}{Initial synthetic-run headline comparison. Acquisition-only is an ablation, not an independently optimized competing framework. Values are means over 12 planted worlds.}
+\clearpage
+\tableofcontents
+\clearpage
+
+\section{Evidence provenance, data sources, and experimental scope}
+This report analyzes \emph{recorded data files}, not retrofitted narrative claims. Figures were regenerated with \texttt{make\_figures.py} using only the committed CSV/JSON outputs named below. Apart from re-analysis, visualization, and descriptive paired comparisons, \textbf{no new model training, LLM experimentation, or human evaluation is asserted}. The original scripts, tests, and raw outputs live in the RECON repository.
+
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{p{.29\linewidth}Yp{.17\linewidth}}
+\toprule
+\textbf{Dataset / file} & \textbf{Direct use in this report} & \textbf{Record count}\\\midrule
+\texttt{results/per\_world.csv} & Initial support F1, acquisition-only, pairwise, held-out transfer prediction & 24 world-policy rows\\
+\texttt{results/summary.json} & Initial-design settings, conditional loadings, planted witnesses, diagnostic controls & 12 worlds / policy\\
+\texttt{stress\_per\_world.csv} & Five scenarios, three sampling policies, score/error and packet-recovery outcomes & 180 rows\\
+\texttt{stress\_summary.json} & Aggregate means, paired world bootstrap intervals, edge confirmation and falsification counts & 60 world-scenarios\\
+\texttt{neural\_module\_}\\\texttt{per\_seed.csv} & Per-seed scores of trained, masked, restored, and retrained modules & 8 seeds\\
+\texttt{neural\_module\_}\\\texttt{summary.json} & Neural setup and aggregate scores, controls, disclaimers & 8 seeds\\
+\bottomrule
+\end{tabularx}
+\caption{Auditable data lineage. The raw files and generation code, rather than the plots, are the sources of the reported values.}\label{tab:data}
+\end{table}
+
+\textbf{Units of independence.} The initial and robustness experiments randomize across \emph{planted world seeds}. Millions of Bernoulli draws within a world make an outcome mean precise, but \emph{do not} create millions of independent scientific worlds. The eight neural seeds are the replication unit for the trained-modular experiment. Error bars in bootstrap comparisons resample worlds, never individual test questions within the same fitted learner.
+
+\textbf{Two distinct simulated datasets.} The initial pilot and the five-scenario robustness run are \emph{not} pooled as if they were identical trials. Both use 12 worlds/policy, but the robustness implementation uses its own controls, metrics, and experimental design. The initial result (0.976 versus 0.799) and calibrated robustness result (0.943 versus 0.822) are reported separately. No claim is made that one is an exact external replication of the other.
+
+\section{Mechanism being tested and why the contrast matters}
+\textbf{Three measurement channels.} For each intervention packet $T$, a model copy receives an acquisition protocol $A$ (skill exposure versus filler), a functional lesion protocol $L$ (targeted mask versus matched sham), or a selective relearning protocol $R$ after fixed disruption. For candidate skill subset $S$, anchored factorial contrasts are
+\[
+\Omega_S(F)=\sum_{T\subseteq S}(-1)^{|S|-|T|}F(T),\quad
+m_S=(\Omega_S(F^A),-\Omega_S(F^L),\Omega_S(F^R))^\top.
+\]
+Under a calibrated cross-channel loading model $m_S=B(\theta_S,u_S,v_S)^\top+e_S$, the shared functional contribution $\theta_S$ may be distinguishable from alternative routes $u_S$ and damage/recovery confounds $v_S$. This is \emph{a conditional inverse problem}: a reversible lesion is not proof of erased knowledge; three fitted channel means are not evidence that the loading model holds in a real LLM.
+
+\textbf{What is learned in the pilot.} The primary support metric evaluates agreement of estimated sparse higher-order edges with the simulator's planted shared-edge set. Minimal-packet F1 instead measures whether the estimated acquisition function retrieves the entire family of inclusion-minimal gain-sufficient packets. Held-out three-channel RMSE and unseen fourth-action MAE measure different kinds of predictive accuracy. High support F1 does not logically imply accurate packet-family identification or future intervention validity.
+
+\section{Initial planted-world benchmark}
+The initial run uses $p=6$ skills, maximum modeled edge order $3$, four planted shared edges, two alternative-route-only and two lesion-impairment-only edges. Each design assigns \textbf{48 packets per world}, three channels, and matching controls with \textbf{1,024 Bernoulli draws per raw arm}: \textbf{294,912 simulated observations per method/world}. A common group-sparsity penalty $0.006$ and a demo edge-support threshold $0.03$ are used. These are synthetic response generators, not training runs for LLMs.
+
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{Yrr}
+\toprule
+\textbf{Metric (12-world mean)} & \textbf{Uniform random} & \textbf{D-optimal fixed}\\\midrule
+Shared-edge support F1 (larger is better) & 0.799 & \textbf{0.976}\\
+Acquisition-only support F1 & 0.538 & \textbf{0.748}\\
+Tri-channel pairwise-only F1 & 0.319 & 0.301\\
+Three-channel held-out RMSE (lower is better) & 0.0262 & \textbf{0.0092}\\
+Corrected fourth-action held-out MAE (lower is better) & 0.0237 & \textbf{0.0081}\\
+\bottomrule
+\end{tabularx}
+\caption{Recomputed headline metrics from \texttt{per\_world.csv}, not accuracy values from a pretrained LLM.}\end{table}
+
+\fig{.93}{02_paired_worlds}{World-by-world support recovery. Connections pair two packet designs within each synthetic seed; the nonadaptive D-optimal method is a well-known baseline, not a new theorem or invention.}
+\fig{.91}{13_pilot_distributions}{Distributional sanity check. The right panel tests the relationship between support F1 and the corrected fourth-action prediction error; low errors are generated within the simulator's calibrated response family.}
+\begin{resultbox}\textbf{Assessment.} The selected high-order inverse problem is computationally tractable on calibrated planted worlds, and thoughtful packet allocation matters. This makes it a suitable \emph{experimental platform}. It does not demonstrate that cross-channel neural mechanisms can be localized, that the theoretical loadings generalize, or that the proposed adaptive optimizer is superior.\end{resultbox}
+
+\section{Adversarial robustness: five stress conditions}
+The adversarial suite tests \textbf{three equal-packet policies} (uniform random, fixed D-optimal and outcome-adaptive margin-weighted selection) on the same \textbf{12 planted seeds per scenario}, with \textbf{48 packets per policy/world}. Each raw arm is sampled 1,024 times, except the low-replication case (96). The adaptive method is an exploratory heuristic with a 12-packet D-optimal pilot; it has \emph{no proved cost or identification superiority}. The support threshold is fixed at 0.03 in all scenarios.
+
+\begin{table}[H]\centering\scriptsize
+\begin{tabularx}{\linewidth}{Yrrr}
+\toprule
+\textbf{Scenario / mean support F1} & \textbf{Random} & \textbf{D-optimal} & \textbf{Adaptive}\\\midrule
+Calibrated & 0.822 & \textbf{0.943} & 0.916\\
+Low replication (96 samples/arm) & 0.622 & \textbf{0.657} & 0.611\\
+Weak signal, below fixed support threshold & \textbf{0.100} & 0.000 & 0.033\\
+Unmodeled recovery interference & 0.771 & \textbf{0.897} & 0.867\\
+Unmodeled order-four edge & 0.710 & \textbf{0.832} & 0.740\\
+\bottomrule
+\end{tabularx}
+\caption{Mean support F1 from \texttt{stress\_summary.json}; higher is better. Bold highlights the largest mean in that row without asserting significance.}\end{table}
+
+\fig{.97}{03_stress_support}{Higher-order edge support F1 across five regimes. The calibrated D-optimal advantage is real within this generator, whereas the weak-effect failure is severe.}
+\fig{.96}{07_recovery_heatmaps}{Comparison of support recovery against minimal teaching-packet family recovery. Both objectives matter, but they are non-equivalent.}
+
+\subsection{The minimal sufficient packet problem remains substantially harder}
+Candidate hyperedges encode individual high-order interaction coefficients. A \emph{minimal sufficient packet} is an inclusion-minimal set of taught skills crossing a predeclared gain threshold on closed-book transfer. These families can contain multiple alternative pathways and can change sharply near a threshold even when interaction estimates are fairly accurate. In the calibrated suite D-optimal achieves mean edge F1 \textbf{0.943} but packet-family F1 only \textbf{0.820}; with the unmodeled order-four edge the corresponding numbers are \textbf{0.832} and \textbf{0.499}. Thus success on support identification does \emph{not} solve the teaching-packet objective.
+\fig{.96}{04_stress_minimal_packets}{Every inclusion-minimal sufficient set must be recovered, not just one favorable packet. Model mismatch causes pronounced disagreement.}
+
+\subsection{Prediction quality and experimental-model mismatch}
+The held-out channels and fourth action provide two complementary diagnostics. In the calibrated robustness suite, D-optimal has three-channel RMSE \textbf{0.00776} and fourth-action MAE \textbf{0.00832}, versus random \textbf{0.02438} and \textbf{0.02206}. Yet low prediction error \emph{within a misspecified fitting dictionary} is not the same as recovery of the true dependency support: an omitted order-four effect can be diluted across observed terms. The fourth-action prediction is generated by an oracle-calibrated simulator, not learned independently from neural interventions.
+\fig{.96}{05_stress_rmse}{Three-channel transfer-response prediction errors. Lower is better; the unit is the synthetic block-mean score.}
+\fig{.96}{06_stress_fourth_action}{Fourth-action mean absolute prediction error. This is a synthetic overidentification test, not evidence of external neural calibration.}
+
+\section{Paired uncertainty quantification and the adaptive-method warning}
+Averages over 12 worlds are not enough to establish an optimizer's superiority. The stored bootstrap resamples \emph{entire worlds} and compares methods on matched seeds. For calibrated support F1, D-optimal minus random has mean difference \textbf{+0.121} with 95\% bootstrap interval \textbf{[+0.029, +0.237]}; D-optimal minus adaptive is only \textbf{+0.027} with interval \textbf{[-0.033, +0.093]}. The latter includes zero. The adaptive heuristic is neither statistically established as inferior everywhere nor supported as superior. Some stress scenarios show D-optimal's advantage declining or reversing.
+\fig{.97}{08_paired_bootstrap}{Paired world-bootstrap intervals extracted from the stored \texttt{stress\_summary.json}. Intervals that cross zero do not resolve the comparative ordering at this sample size.}
+\fig{.93}{14_failure_signal}{A mechanistically important negative result: when all planted nonzero effects are smaller than the fixed support threshold, even an estimator with accurate numerical predictions may yield near-zero structural F1.}
+\begin{resultbox}\risk{Reviewer-facing limitation.} The weak-signal regime scales all planted shared effects to 35\% of their standard magnitude, placing them below the preset $0.03$ classification threshold. Therefore the near-zero F1 is partly an \emph{estimand/decision-threshold failure} and is not evidence that infinite samples fail to estimate the coefficients. A meaningful next test must predeclare a smaller threshold or an indifference zone, and report interval width and decision yield rather than only binary F1.\end{resultbox}
+
+\section{Independent confirmations and falsification controls}
+The original oracle-selected initial diagnostics were \emph{not} a valid assessment of discovery. In the follow-up robustness run, candidate hyperedges were selected from the estimated model \emph{without consulting planted true support}, and then checked on new independently generated Bernoulli samples. Each of 12 worlds contributed three selected candidate edges and one negative control. Across the experiment there were \textbf{36 certified positives}, \textbf{12 negative controls}, \textbf{zero false certifications relative to planted truth}, and \textbf{48/48 planted effects within their reported conservative intervals}. Total confirmation required \textbf{47,520,000 raw synthetic Bernoulli trials}. The per-world familywise error setting was 0.05, with an assumed systematic raw-arm bias bound of 0.00025.
+
+\fig{.94}{09_confirmation}{Independently sampled model-selected confirmations and negative controls; the scores are generated from the same planted-world family as discovery. Zero observed errors among 48 is not a guarantee of zero error beyond this small suite.}
+
+A separately constructed \emph{fourth-action} challenge tested whether the calibrated loading model could be falsified. With \textbf{6,000 independent draws per world}, it rejected \textbf{0/12} correctly specified null worlds and \textbf{12/12} worlds with an injected \textbf{+0.08} misspecification. The null predictions use \emph{oracle-calibrated} simulator loadings. These experiments demonstrate a useful mechanism for falsification but do \emph{not} determine its detection power for small, correlated, or unknown real-neural failures.
+\fig{.94}{10_falsification}{A positive methodological control: gross model mismatch is detectable with a truly held-out intervention, under the simulator's known calibration.}
+
+\begin{resultbox}\textbf{Statistical interpretation.} The independent confirmation is a genuine improvement over choosing true planted edges, and the zero-observed-error outcome is encouraging for the controlled suite. It remains model-specific and costly. No claim of a high-confidence global false-discovery bound is made without validating assumptions on calibration, adaptive stopping, nuisance error, and independence of confirmation samples.\end{resultbox}
+
+\section{Actual PyTorch trained-neural pilot: a necessary negative control}
+The current non-synthetic experiment trained two small, independent $1$--$32$--$32$--$1$ tanh MLP modules over \textbf{eight CPU seeds}. One approximates $2x$ and the other $\cos(x^2)$; a hand-coded multiplication composes them into $\frac{d}{dx}\sin(x^2)=2x\cos(x^2)$. Training uses \textbf{225 Adam steps per exposed module}, and held-out tests use \textbf{1,024 fresh inputs per seed}. The composition operation is \emph{built into the architecture}: this pilot cannot demonstrate that a neural model discovered the chain rule or a hidden dependency circuit.
+
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{Yrr}
+\toprule
+\textbf{Condition} & \textbf{Mean held-out score} & \textbf{Interpretation}\\\midrule
+Untrained reference & 0.54150 & Performance baseline\\
+Both derivative modules trained & \textbf{0.99998} & High accuracy on fixed composition\\
+New, out-of-training-range inputs & \textbf{0.99663} & Limited OOD check\\
+Reversible inference gate mask & 0.54089 & Function suppressed\\
+Mask removed, zero updates & \textbf{0.99998} & \textbf{Weights were never erased}\\
+Destructive output-projection reset & 0.54089 & Parameter perturbation\\
+Retrained after destructive reset & \textbf{0.99997} & Recovery from perturbation\\
+\bottomrule
+\end{tabularx}
+\caption{Measured $1/(1+\mathrm{MSE})$ from \texttt{neural\_module\_summary.json}; these models are not LLMs and conditions have unequal training-update budgets.}\end{table}
+\fig{.98}{11_neural_lesion}{The key lesion/relearning control: masking causes a major loss, but simply removing the reversible mask restores performance without any gradient updates.}
+\fig{.94}{12_neural_seeds}{Across eight seeds, fully trained and immediately restored scores overlap, while masked scores remain low. This directly demonstrates the performance-suppression versus erasure distinction in this controlled architecture.}
+
+\textbf{Interpretation.} The successful acquisition and recovery code path is valuable as an operational test harness; however, the observed relationship is architecture-imposed, not discovered. In particular, comparing ``both trained'' against ``only one trained'' is not compute-matched, and resetting output weights is \emph{not} a validated machine-unlearning operation. Any structural claim about open-weight LMs will require independent localization, sham edits, off-target probes, matched updates, dose sweeps, and an independently predictive fourth intervention.
+
+\section{What the evidence supports, and what it does not}
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{>{\bfseries}p{.19\linewidth}Y}
+\toprule
+\textbf{Claim status} & \textbf{Evidence and proper wording}\\\midrule
+\textcolor{teal}{Supported within synthetic regime} & Correctness of finite-model arithmetic; selective recovery of planted support; practical advantages of fixed D-optimal over random in several scenarios; ability to construct and challenge a fourth-action calibration.\\
+\textcolor{teal}{Limited trained-model observation} & Small PyTorch modules can be acquired and restored; reversible masking can suppress behavior without removing learned parameters.\\
+\textcolor{orange}{Unresolved} & Optimal adaptive budget allocation; sample-efficient certified recovery under unknown lesion leakage; reliable recovery of alternative minimal packets under shift; generalization across neural learner families.\\
+\textcolor{red}{Not established} & Causal neural circuits recovered from pretrained LMs; durable LLM unlearning or new theoretical SOTA; human learning prerequisites; broad OOD scientific transfer; best-paper or acceptance probability.\\
+\bottomrule
+\end{tabularx}
+\caption{Evidence-to-claim audit; this table is intended to accompany any external sharing with a prospective adviser.}\end{table}
+
+\subsection{Why the pilot is nevertheless scientifically promising}
+\begin{enumerate}
+\item \textbf{A real and falsifiable target exists.} Source-linked higher-order teaching effects, retained abilities, and off-target lesion damage can be separated \emph{in a calibrated model}, making clear what a neural generalization would need to reproduce.
+\item \textbf{Different endpoints diverge.} The sizable gap between edge F1 and minimal-packet F1 provides an authentic modeling challenge with clear evaluation targets, not simply a benchmark in which everything has already been solved.
+\item \textbf{The experiments reveal their own failure modes.} Weak effects, omitted higher-order interactions, and recovery confounds yield controlled counterexamples. A robust paper can treat identifiability boundaries as an empirical scientific finding rather than concealing model mismatch.
+\item \textbf{Independent inference and falsification are feasible.} Confirmation of model-selected edges and detection of injected fourth-action misspecification show a path toward appropriately cautious discovery certificates, albeit at substantial simulated observation cost.
+\end{enumerate}
+
+\subsection{The strongest legitimate counterargument}
+A skeptical reviewer could say: \emph{``Your model is calibrated to make three channels invertible; factorial design, sparse estimation, information gain, confidence sequences and active hypothesis testing were known. Your highest scores arise in worlds constructed to fit the hypothesis class; your adaptive design is not yet competitive; and your neural study is an engineered composition.''} That critique is largely correct at the current stage. The project becomes a top-tier \emph{research contribution} only if the next stage delivers an identification or lower-bound result beyond classical linear estimability \emph{and} prospective interventional predictions on non-engineered neural learners compared against optimized, channel-aware controls.
+
+\section{Research go/no-go criteria and next experimental milestones}
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{p{.08\linewidth}p{.29\linewidth}Y}
+\toprule
+\textbf{Stage} & \textbf{Experiment to execute} & \textbf{Decision requirement}\\\midrule
+1 & \textbf{Calibration stress and hypothesis class audit} & Expand the candidate channel menu, validate loadings on independent modules, include near-equivalent and unidentifiable mechanisms, report interval width and abstention.\\
+2 & \textbf{New learner, real acquisition} & Train a transformer on freshly generated executable symbolic rules with checkpoint-matched seeds; test novel graph motifs, alternates and order changes; no training/test template overlap.\\
+3 & \textbf{Genuine neural lesion analysis} & Compare reversible masks, parameter perturbations, random shams, localization controls, never-exposed models, retained-memory probes and dose-dependent relearning.\\
+4 & \textbf{Adversarial experimental design comparison} & Same menu, same raw observations, same clone/training/verification costs for D-optimal, adaptive factorial, cost-aware pure exploration and RECON's policy; report \emph{decision yield versus full cost}.\\
+5 & \textbf{Independent confirmation and frozen tests} & Predeclare target family and calibration tolerance; predict fourth-action and unopened program-family outcomes before revealing responses. Count certified, ambiguous and falsified edges together.\\
+6 & \textbf{Theory beyond a toy inverse problem} & Produce a nonstandard identifiability/sample-complexity theorem under sparse history-dependent interventions and bounded unknown lesion leakage, or pivot if existing results already subsume it.\\
+\bottomrule
+\end{tabularx}
+\caption{Suggested progression, not work claimed to be completed in this report.}\end{table}
+
+\begin{resultbox}
+\textbf{Go/no-go recommendation.} \sig{Go for a tightly scoped second-stage experiment.} The calibrated synthetic result, genuine failure analyses, and initial trained-module control justify allocating effort to a controlled transformer experiment and an explicit theoretical novelty audit. \risk{Do not claim a general method is validated} until fourth-action and lesion-calibration predictions succeed on untouched neural copies, and RECON's policy proves competitive at equal total compute. If these gates fail, publish negative identifiability findings or narrow the proposed contribution.
+\end{resultbox}
+
+\section{Reproducibility instructions and audit trail}
+The public-facing repository path is \href{https://github.com/MohammadAmanlou/RECON}{\texttt{github.com/MohammadAmanlou/RECON}} (currently private). The experiment generation code and source outputs should be consulted together; no inference should be based on figures without raw evidence. After cloning, a scientific reproduction may use the following recorded commands, with CPU/GPU requirements and exact dependency versions checked for that environment:
+\begin{quote}\ttfamily\scriptsize
+pip install -e '.[test,plot]'\par
+pytest -q tests\par
+python -m recon.experiments --out results --seeds 12 --packets 48 \textbackslash\par\hspace*{3em}--replicates 1024 --confirm-replicates 60000\par
+python -m recon.robustness --out results/robustness --seeds 12 \textbackslash\par\hspace*{3em}--packets 48 --confirmation-replicates 60000 --fourth-trials 6000\par
+python -m recon.neural\_pilot --out results/neural --seeds 8\par
+python reports/RECON\_Evidence\_2026-11-19/make\_figures.py \textbackslash\par\hspace*{3em}--repo-root . --out reports/RECON\_Evidence\_2026-11-19/figures
+\end{quote}
+Do not claim that all commands were rerun in the present report-generation pass: \textbf{the report regenerates plots from the previously executed and committed data}. The neural command uses the checked-in script interface and requires an installed CPU or GPU PyTorch backend. Full package checks and CI status are recorded in GitHub Actions; CI verifies its configured suites, not broad neural generalization.
+
+\textbf{Data integrity.} Each plotted quantity is tied to a CSV column or JSON key in the stated files. Raw rows, between-world standard deviations, and the 12-world paired bootstrap allow an independent reviewer to reproduce the displayed comparison. The report deliberately includes cases where the hypothesis class or decision rule fails.
+
+\vspace{5mm}\hrule\vspace{2mm}
+{\footnotesize\color{slate}This is a preliminary empirical and methodological report for research discussion, not a peer-reviewed manuscript and not a record of an externally verified scientific result. The RECON-$\Omega$ proposal itself is a distinct theoretical research plan.}
+\end{document}

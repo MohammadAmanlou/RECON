@@ -82,3 +82,9 @@ docs/                        # scientific assumptions, results and next steps
 4. Pre-register a correct-decision-yield vs cost experiment with held-out neural actions; abstain when the calibrated response restrictions fail.
 
 **Reproducibility:** The current claim is that this *code* reproduces a limited synthetic proof-of-concept. It does not establish top-conference novelty, empirical neural effectiveness, supervisor acceptance, or funding.
+
+## Proposal and experimental evidence (19 Nov 2026)
+
+- [RECON-Ω proposal (27-page PDF)](papers/recon_omega_proposal/proposal.pdf) and [editable Overleaf source](papers/recon_omega_proposal/main.tex). The original scientific content is preserved; one executive-summary page was inserted before the contents.
+- [Preliminary evidence report (12-page PDF)](reports/recon_evidence_2026_11_19/report.pdf), [editable LaTeX](reports/recon_evidence_2026_11_19/main.tex), [14 vector charts](reports/recon_evidence_2026_11_19/figures) and [regeneration script](reports/recon_evidence_2026_11_19/make_figures.py).
+- [Reproducible input SHA-256 manifest](reports/recon_evidence_2026_11_19/DATA_PROVENANCE.md). The report uses committed *synthetic-world* and *small modular-PyTorch* data; **not** a pretrained LLM unlearning study, novel theorem verification, or human learning result.
