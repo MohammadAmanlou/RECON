@@ -28,3 +28,15 @@ jobs:
             results/summary.json
             results/per_world.csv
             results/synthetic_support_f1.png
+      - name: Reproduce synthetic stress and falsification suites
+        run: python -m recon.robustness --out results/robustness --seeds 12 --packets 48 --confirmation-replicates 60000 --fourth-trials 6000
+      - name: Render robustness chart
+        run: python -m recon.plot_reports --root results --only robustness
+      - name: Preserve robustness evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: recon-robustness-evidence
+          path: |
+            results/robustness/stress_per_world.csv
+            results/robustness/stress_summary.json
+            results/robustness/stress_support_f1.svg
