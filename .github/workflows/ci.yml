@@ -1,0 +1,30 @@
+name: RECON pilot CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  synthetic-pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install
+        run: python -m pip install -e '.[test,plot]'
+      - name: Run numerical and scientific unit tests
+        run: pytest -q tests
+      - name: Reproduce synthetic pilot
+        run: python -m recon.experiments --out results --seeds 12 --packets 48 --replicates 1024 --confirm-replicates 60000
+      - name: Preserve computed evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: recon-synthetic-pilot-results
+          path: |
+            results/summary.json
+            results/per_world.csv
+            results/synthetic_support_f1.png

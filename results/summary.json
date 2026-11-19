@@ -1,0 +1,169 @@
+{
+  "edge_support_threshold": 0.03,
+  "experiment_type": "CALIBRATED SYNTHETIC WORLD ONLY; NOT LLM RESULTS",
+  "identification_witness": {
+    "fourth": 0.4,
+    "loading": [
+      [
+        1.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "means": [
+      0.24000000000000002,
+      0.2,
+      0.30000000000000004
+    ],
+    "rank_full": 3,
+    "rank_two_channel": {
+      "AL": 2,
+      "AR": 2,
+      "LR": 2
+    },
+    "theta": 0.14,
+    "two_channel_null_vectors": {
+      "AL": [
+        1.0,
+        -1.0,
+        -1.0
+      ],
+      "AR": [
+        1.0,
+        -1.0,
+        0.0
+      ],
+      "LR": [
+        1.0,
+        0.0,
+        -1.0
+      ]
+    }
+  },
+  "limitations": [
+    "The B loading matrix and the independently replicated Bernoulli block model are constructed, not learned from LLMs.",
+    "D-optimal is outcome-nonadaptive and no claim is made of optimal sequential design.",
+    "Fourth-action holdout is generated under the same calibrated loading matrix and is only a positive-control sanity check.",
+    "Confirmation targets use oracle-selected edges to evaluate the finite-sample certificate; they are not discovery claims.",
+    "The support-cutoff and regularization settings are demonstration choices, not preregistered hyperparameters for neural experiments.",
+    "There is no open-weight model training, no mechanistic localization, and no human experiment here."
+  ],
+  "methods": {
+    "d_optimal": {
+      "acquisition_only_f1": {
+        "mean": 0.7477513227513227,
+        "std_between_worlds": 0.1599236635240177
+      },
+      "heldout_fourth_action_mae": {
+        "mean": 0.013855391078700189,
+        "std_between_worlds": 0.00784974275176233
+      },
+      "heldout_three_channel_rmse": {
+        "mean": 0.009192006643155629,
+        "std_between_worlds": 0.002759477666846508
+      },
+      "pairwise_tri_f1": {
+        "mean": 0.3011904761904762,
+        "std_between_worlds": 0.251051181090023
+      },
+      "tri_f1": {
+        "mean": 0.9761904761904763,
+        "std_between_worlds": 0.05560706744010881
+      },
+      "tri_precision": {
+        "mean": 1.0,
+        "std_between_worlds": 0.0
+      },
+      "tri_recall": {
+        "mean": 0.9583333333333334,
+        "std_between_worlds": 0.09731236802019036
+      }
+    },
+    "random": {
+      "acquisition_only_f1": {
+        "mean": 0.5382936507936508,
+        "std_between_worlds": 0.23216080146726634
+      },
+      "heldout_fourth_action_mae": {
+        "mean": 0.046571250071790325,
+        "std_between_worlds": 0.026310619532471435
+      },
+      "heldout_three_channel_rmse": {
+        "mean": 0.02618263277863364,
+        "std_between_worlds": 0.015973148710799877
+      },
+      "pairwise_tri_f1": {
+        "mean": 0.3190476190476191,
+        "std_between_worlds": 0.2670220266744565
+      },
+      "tri_f1": {
+        "mean": 0.7992724867724869,
+        "std_between_worlds": 0.2902895374752917
+      },
+      "tri_precision": {
+        "mean": 0.8513888888888889,
+        "std_between_worlds": 0.2936584229343156
+      },
+      "tri_recall": {
+        "mean": 0.7708333333333334,
+        "std_between_worlds": 0.31002810234303635
+      }
+    }
+  },
+  "packet_budget_per_world_policy": 48,
+  "penalty_group_lasso": 0.006,
+  "plot_generated": true,
+  "preselected_oracle_confirmation_diagnostics": [
+    {
+      "certified_positive": true,
+      "edge": "(1, 2, 5)",
+      "estimate": 0.06556666666666677,
+      "lower": 0.028623196457971546,
+      "radius": 0.03694347020869523,
+      "replicates_per_raw_arm": 60000,
+      "total_simulated_bernoulli_trials": 1440000,
+      "true_theta": 0.07469799986344677,
+      "upper": 0.102510136875362
+    },
+    {
+      "certified_positive": true,
+      "edge": "(2, 3, 4)",
+      "estimate": 0.06484999999999996,
+      "lower": 0.027906529791304736,
+      "radius": 0.03694347020869523,
+      "replicates_per_raw_arm": 60000,
+      "total_simulated_bernoulli_trials": 1440000,
+      "true_theta": 0.07767194497574398,
+      "upper": 0.1017934702086952
+    },
+    {
+      "certified_positive": true,
+      "edge": "(1, 5)",
+      "estimate": 0.08166666666666667,
+      "lower": 0.056786329048654355,
+      "radius": 0.02488033761801231,
+      "replicates_per_raw_arm": 60000,
+      "total_simulated_bernoulli_trials": 720000,
+      "true_theta": 0.07905365686594451,
+      "upper": 0.10654700428467898
+    }
+  ],
+  "replicates_per_treated_or_control_arm": 1024,
+  "scientific_executable_task_checks": {
+    "max_reverse_finite_diff_abs_error": 5.851763518194275e-11,
+    "max_reverse_forward_abs_error": 2.220446049250313e-16,
+    "tasks_checked": 100
+  },
+  "seed_world_count": 12,
+  "total_trials_per_policy_world": 294912
+}
