@@ -1,0 +1,55 @@
+{
+  "backend_torch_version": "2.10.0+cpu",
+  "experiment_type": "ACTUAL CPU PYTORCH MODULE TRAINING (NOT AN LLM)",
+  "limitations": [
+    "This is a transparent modular neural learner, NOT a transformer, LLM, or demonstration of discovered neural circuits.",
+    "Chain-rule composition is hardcoded; the modules only approximate two local derivatives.",
+    "Conditions have different training-update budgets (0/1/1/2 modules), so their difference is descriptive, not a compute-matched effect estimate.",
+    "Reversible mask is deliberately a zero-parameter-change functional lesion; effortless restoration proves only that the masked weights survived.",
+    "Destructive output-projection zeroing is not an established machine-unlearning method.",
+    "These observed skill dependencies are architecture/protocol-specific and are not general human prerequisites."
+  ],
+  "metrics": {
+    "destructive_output_projection_reset_score": {
+      "between_seed_std": 0.005116912130658453,
+      "mean": 0.5408852346736779
+    },
+    "heldout_ood_both_score": {
+      "between_seed_std": 0.0023715582144236504,
+      "mean": 0.9966273524710028
+    },
+    "in_domain_both_score": {
+      "between_seed_std": 1.621493865474265e-05,
+      "mean": 0.9999760614122792
+    },
+    "in_domain_empty_score": {
+      "between_seed_std": 0.014337779716370682,
+      "mean": 0.5415009685117971
+    },
+    "in_domain_sine_score": {
+      "between_seed_std": 0.04138211372706358,
+      "mean": 0.5200213974322322
+    },
+    "in_domain_square_score": {
+      "between_seed_std": 0.1297861259790478,
+      "mean": 0.5285499713473636
+    },
+    "mask_restored_zero_update_score": {
+      "between_seed_std": 1.621493865474265e-05,
+      "mean": 0.9999760614122792
+    },
+    "retrained_after_reset_score": {
+      "between_seed_std": 8.64335065473868e-06,
+      "mean": 0.9999714356962556
+    },
+    "reversible_mask_score": {
+      "between_seed_std": 0.005116912130658453,
+      "mean": 0.5408852346736779
+    }
+  },
+  "model": "two separate 1-32-32-1 tanh MLP skill modules",
+  "score": "1/(1+mean squared error) on 1024 heldout x inputs per seed",
+  "seeds": 8,
+  "source_program": "analytic derivatives d/dx(sin(x^2)) with fixed chain rule composition",
+  "training_steps_per_assigned_skill": 225
+}
