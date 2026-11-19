@@ -42,7 +42,7 @@ def single_run(seed: int, policy: str, packet_budget: int,
     fitted_means = Xh @ full
     rmse = float(np.sqrt(np.mean((true_means - fitted_means) ** 2)))
     # A fourth action was not used for fitting; calibrated response predicts it.
-    fourth_prediction = Xh @ full @ np.linalg.solve(B, B4)
+    fourth_prediction = Xh @ full @ np.linalg.solve(B.T, B4)
     fourth_true = Xh @ world.w @ B4
     fourth_mae = float(np.mean(abs(fourth_prediction - fourth_true)))
     return {"world_seed": seed, "policy": policy, "packet_budget": packet_budget,

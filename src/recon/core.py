@@ -17,6 +17,9 @@ B4 = np.asarray([1., 2., 1.])  # overidentifying action, specified before testin
 CHANNELS = ("acquisition", "lesion", "relearning")
 SIGNS = np.asarray([1., -1., 1.])  # lesion decreases raw target accuracy
 BASE = 0.46
+# A separate reference risk is required for the high-gain fourth channel: with
+# BASE=0.46, some legal synthetic worlds produce probabilities above one.
+FOURTH_BASE = 0.30
 
 
 def hyperedges(p: int, max_order: int) -> tuple[tuple[int, ...], ...]:
@@ -47,7 +50,9 @@ class World:
             raise ValueError("coefficient shape mismatch")
         all_masks = np.arange(1 << self.p)
         raw = self.probabilities(all_masks)
-        if np.min(raw) < 0.01 or np.max(raw) > 0.99:
+        fourth = self.probabilities(all_masks, fourth=True)
+        if (np.min(raw) < 0.01 or np.max(raw) > 0.99 or
+                np.min(fourth) < 0.01 or np.max(fourth) > 0.99):
             raise ValueError("simulator probabilities out of calibration range")
 
     def probabilities(self, packets: Sequence[int], fourth: bool = False,
@@ -55,7 +60,7 @@ class World:
         phi = feature_matrix(packets, self.edges)
         if fourth:
             # controlled, independently falsifiable fourth-action perturbation
-            return self.base + phi @ self.w @ B4 + violation * phi[:, -1]
+            return FOURTH_BASE + phi @ self.w @ B4 + violation * phi[:, -1]
         m = phi @ self.w @ B.T
         return self.base + m * SIGNS.reshape(1, 3)
 
@@ -130,7 +135,9 @@ def select_packets(p: int, edges: Sequence[tuple[int, ...]], count: int,
 
 
 def sample_contrasts(world: World, packets: np.ndarray, replicates: int,
-                     seed: int) -> np.ndarray:
+                     seed: int,
+                     recovery_shift: tuple[tuple[int, ...], float] | None = None
+                     ) -> np.ndarray:
     """Matched sham controls and treated fresh copies, each charged separately.
 
     Binomial draws summarize *independent simulated Bernoulli observations*;
@@ -140,6 +147,13 @@ def sample_contrasts(world: World, packets: np.ndarray, replicates: int,
         raise ValueError("replicates must be positive")
     rng = np.random.default_rng(seed)
     treated = world.probabilities(packets)
+    if recovery_shift is not None:
+        edge, shift = recovery_shift
+        edge_mask = sum(1 << k for k in edge)
+        present = ((packets & edge_mask) == edge_mask)
+        treated[:, 2] += shift * present
+    if not np.all((treated > 0) & (treated < 1)):
+        raise ValueError("intervention probabilities are invalid")
     control = np.broadcast_to(world.probabilities([0])[0], treated.shape)
     y_t = rng.binomial(replicates, treated) / replicates
     y_0 = rng.binomial(replicates, control) / replicates
@@ -155,6 +169,8 @@ def group_lasso(phi: np.ndarray, y: np.ndarray, penalty: float,
     if n != len(y) or penalty < 0:
         raise ValueError("invalid regression input")
     L = np.linalg.norm(phi, ord=2) ** 2 / n
+    if L <= 0:
+        raise ValueError("design contains no informative features")
     z = np.zeros((d, y.shape[1]))
     beta = z.copy()
     momentum = 1.
