@@ -16,7 +16,7 @@ The runner generated the JSON/CSV evidence in `results/` directly from the commi
 | Three-channel precision | 0.8514 ± 0.2937 | 1.0000 ± 0.0000 |
 | Three-channel recall | 0.7708 ± 0.3100 | 0.9583 ± 0.0973 |
 | Held-out three-channel mean RMSE | 0.0262 ± 0.0160 | 0.0092 ± 0.0028 |
-| Held-out fourth-action mean MAE | 0.0466 ± 0.0263 | 0.0139 ± 0.0078 |
+| Held-out fourth-action mean MAE | 0.0237 (corrected; see below) | 0.0081 (corrected; see below) |
 
 *All ± values are standard deviations across planted worlds, **not** confidence intervals. The design is not outcome-adaptive. Results only show comparative behavior of algorithms on this chosen synthetic generator.*
 
@@ -27,6 +27,13 @@ The runner generated the JSON/CSV evidence in `results/` directly from the commi
 - **Oracle-selected diagnostic** edge `(2, 3, 4)`: θ true=0.0777; independent estimate=0.0648, conservative interval=[0.0279, 0.1018], certified-positive=True; 1,440,000 raw simulated Bernoulli observations. Selection used the planted truth; hence this is **not** a discovery-rate or feature-selection certificate.
 - **Oracle-selected diagnostic** edge `(1, 5)`: θ true=0.0791; independent estimate=0.0817, conservative interval=[0.0568, 0.1065], certified-positive=True; 720,000 raw simulated Bernoulli observations. Selection used the planted truth; hence this is **not** a discovery-rate or feature-selection certificate.
 - Scientific executable tasks: 100 DAG programs independently checked by reverse-mode, forward-mode, and central-difference gradients. Maximum reverse/forward absolute discrepancy 2.220e-16; maximum reverse/finite-difference discrepancy 5.852e-11.
+
+## New adversarial and trainable-learner evidence
+
+The original fourth-action projection used `solve(B, B4)` rather than `solve(B.T, B4)`, and mixed a probability baseline with a contrast. The corrected comparison preserves all three-channel F1 values but **supersedes the old fourth-action MAE**. This was verified by a new population-exact regression test. Full raw evidence and reports:
+
+- [12-world/5-condition stress suite, paired bootstrap, 48 independently confirmed edges including 12 negative controls](ROBUSTNESS.md)
+- [8-seed actually trained PyTorch modular-learner experiment showing that reversible lesion does not unlearn parameters](NEURAL_PILOT.md)
 
 ## Interpretation and strong caveats
 

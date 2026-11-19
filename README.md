@@ -38,6 +38,20 @@ PYTHONPATH=src python -m recon.experiments --out results
 
 Deterministic seeds and protocol parameters are explicitly recorded in `src/recon/experiments.py`. The command writes `results/summary.json`, `results/per_world.csv`, and an optional plot if Matplotlib is available. All Bernoulli draws are simulated and independently seeded.
 
+## Newly executed adversarial and trainable-learner studies (19 Nov)
+
+The initial synthetic pilot is complemented by an **independent 5-regime stress suite** (calibrated, low-count, weak effect, recovery interference, omitted fourth-order interaction) with uniform random, nonadaptive D-optimal, and an exploratory **outcome-adaptive** arm selector. The adaptive policy is **not demonstrably superior** to D-optimal; its calibrated mean F1 was 0.916 versus D-optimal 0.943 in 12 planted worlds. A fresh data split confirmed 36 discovered positive edges and tested 12 additional algorithm-selected negative controls; these are simulator outcomes, not neural-circuit certificates. See [robustness report](docs/ROBUSTNESS.md).
+
+An optional **actually trained PyTorch modular neural learner** (eight independent seeds) tests local derivative acquisition, reversible module gating, destructive output-layer reset, and relearning. The mask is fully reversible without gradient updates: a deliberate counterexample to interpreting suppressed performance as erased knowledge. **This is NOT an LLM experiment.** See [neural pilot report](docs/NEURAL_PILOT.md).
+
+```bash
+PYTHONPATH=src python -m recon.robustness --out results/robustness --seeds 12 --packets 48
+python -m pip install -e '.[neural]'
+PYTHONPATH=src python -m recon.neural_pilot --out results/neural --seeds 8 --steps 225
+```
+
+**Corrections:** initial held-out fourth-action MAE was computed using the wrong loading transpose (`solve(B, B4)` instead of `solve(B.T, B4)`). The fixed result is regenerated in `results/summary.json`, with executable regression coverage. Three-channel F1 is unchanged. The fourth Bernoulli arm uses a separate 0.30 baseline to maintain valid probabilities.
+
 ## Evidence boundary
 
 1. **What the causal claim means here:** under randomized packet interventions and the stipulated cross-channel loading matrix, `theta` is a *functional* multi-channel effect. The three channels do not, without extra validated assumptions, identify neural circuits or erased knowledge.

@@ -65,8 +65,8 @@
         "std_between_worlds": 0.1599236635240177
       },
       "heldout_fourth_action_mae": {
-        "mean": 0.013855391078700189,
-        "std_between_worlds": 0.00784974275176233
+        "mean": 0.008115397980788195,
+        "std_between_worlds": 0.003617681466411283
       },
       "heldout_three_channel_rmse": {
         "mean": 0.009192006643155629,
@@ -95,8 +95,8 @@
         "std_between_worlds": 0.23216080146726634
       },
       "heldout_fourth_action_mae": {
-        "mean": 0.046571250071790325,
-        "std_between_worlds": 0.026310619532471435
+        "mean": 0.023662642051525375,
+        "std_between_worlds": 0.012644293971986005
       },
       "heldout_three_channel_rmse": {
         "mean": 0.02618263277863364,
