@@ -1,0 +1,21 @@
+{
+  "version": "v1.0-design-freeze",
+  "topic": "Foundations of linear algebra: conceptual recognition",
+  "skills": [
+    {"id":"S1","name":"Vector spaces and vector operations"},
+    {"id":"S2","name":"Matrices and matrix representations"},
+    {"id":"S3","name":"Linear mappings and transformations"},
+    {"id":"S4","name":"Determinants and invertibility"},
+    {"id":"S5","name":"Eigenvalues and eigenvectors"},
+    {"id":"S6","name":"Matrix-based linear systems and Cramer's rule"}
+  ],
+  "topological_order":["S1","S2","S3","S4","S5","S6"],
+  "candidate_hyperedges": [
+    {"parents":["S1","S2"],"child":"S3","rationale":"Vector operations and matrix representations jointly support understanding finite-dimensional linear maps; not necessary for abstract recognition of linear maps."},
+    {"parents":["S2"],"child":"S4","rationale":"Determinants describe square matrices."},
+    {"parents":["S2","S3"],"child":"S5","rationale":"Matrix representation and linear-map concepts jointly support interpretation of eigenpairs."},
+    {"parents":["S2","S4"],"child":"S6","rationale":"Matrix concepts and determinants jointly support determinant-based linear-system methods, especially Cramer's rule; other solution routes do not require determinants."}
+  ],
+  "pairwise_projection": [["S1","S3"],["S2","S3"],["S2","S4"],["S2","S5"],["S3","S5"],["S2","S6"],["S4","S6"]],
+  "evidence_boundary":"KNIGHT semantic triples in kg_evidence.json motivate content selection and provide source provenance, not demonstrated prerequisite edges. The candidate hyperedges and Q-tags are curator-authored pedagogical hypotheses. No student-response evidence establishes them. Soft probabilistic dependencies only; nonmastery of parents does not rule out mastery of the child."
+}
