@@ -1,0 +1,697 @@
+[
+  {
+    "id": "6375f832-d386-4a2a-9a46-981a7877290b",
+    "question": "What mathematical structure is primarily studied in linear algebra that involves operations like vector addition and scalar multiplication?",
+    "options": {
+      "A": "Matrix",
+      "B": "Scalar",
+      "C": "Vector Space",
+      "D": "Linear Transformation"
+    },
+    "correct_answer_key": "C",
+    "source_file": "generated_qa_pairs_level_1.json",
+    "source_row_zero_based": 70,
+    "source_type": "multi_hop_path_mcq",
+    "complexity": 1,
+    "source_nodes": [
+      {
+        "name": "linear algebra",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "vector spaces",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "FOCUSES_ON"
+    ],
+    "skills": [
+      "S1"
+    ],
+    "item_family": "vector_space",
+    "annotation_rationale": "Definition of vector space; recognition of vector operations."
+  },
+  {
+    "id": "199d273f-2b49-4d93-a0a2-6b2b15c1b7ef",
+    "question": "What mathematical structure is primarily studied in linear algebra that is essential for understanding concepts such as linear transformations and eigenvalues?",
+    "options": {
+      "A": "Matrices",
+      "B": "Vector Spaces",
+      "C": "Polynomial Functions",
+      "D": "Real Numbers"
+    },
+    "correct_answer_key": "B",
+    "source_file": "generated_qa_pairs_level_1.json",
+    "source_row_zero_based": 76,
+    "source_type": "multi_hop_path_mcq",
+    "complexity": 1,
+    "source_nodes": [
+      {
+        "name": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "vector spaces",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "FOCUSES_ON"
+    ],
+    "skills": [
+      "S1"
+    ],
+    "item_family": "vector_space",
+    "annotation_rationale": "Recognition of vector spaces as the setting for linear transformations."
+  },
+  {
+    "id": "4d227ea1-90b0-4d14-b045-91849b90fe23",
+    "question": "What mathematical concept, studied in linear algebra, preserves vector addition and scalar multiplication when mapping vectors between spaces?",
+    "options": {
+      "A": "Linear Equations",
+      "B": "Linear Mappings",
+      "C": "Eigenvalues",
+      "D": "Determinants"
+    },
+    "correct_answer_key": "B",
+    "source_file": "generated_qa_pairs_level_1.json",
+    "source_row_zero_based": 64,
+    "source_type": "multi_hop_path_mcq",
+    "complexity": 1,
+    "source_nodes": [
+      {
+        "name": "linear algebra",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "linear mappings",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "FOCUSES_ON"
+    ],
+    "skills": [
+      "S3"
+    ],
+    "item_family": "linear_map_axioms",
+    "annotation_rationale": "Recognition of the defining property of linear maps."
+  },
+  {
+    "id": "15a990d5-dc9b-434e-b263-a9e131663462",
+    "question": "What mathematical concept is defined as a function between two vector spaces that preserves vector addition and scalar multiplication, and is a key topic within linear algebra?",
+    "options": {
+      "A": "Polynomial Functions",
+      "B": "Linear Transformations",
+      "C": "Differential Equations",
+      "D": "Non-linear Functions"
+    },
+    "correct_answer_key": "B",
+    "source_file": "generated_qa_pairs_level_1.json",
+    "source_row_zero_based": 113,
+    "source_type": "multi_hop_path_mcq",
+    "complexity": 1,
+    "source_nodes": [
+      {
+        "name": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "linear transformations",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "REPRESENTS"
+    ],
+    "skills": [
+      "S3"
+    ],
+    "item_family": "linear_map_axioms",
+    "annotation_rationale": "Equivalent definition; same family as row 64."
+  },
+  {
+    "id": "993513a5-9bf8-4364-b66e-0ed428a8384d",
+    "question": "What type of mathematical concept is preserved by linear transformations in vector spaces, as discussed in the context of algebra?",
+    "options": {
+      "A": "Non-linear relationships",
+      "B": "Vector addition and scalar multiplication",
+      "C": "Geometric shapes",
+      "D": "Probability distributions"
+    },
+    "correct_answer_key": "B",
+    "source_file": "generated_qa_pairs_level_1.json",
+    "source_row_zero_based": 118,
+    "source_type": "multi_hop_path_mcq",
+    "complexity": 1,
+    "source_nodes": [
+      {
+        "name": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "linear transformations",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "CONCERNS"
+    ],
+    "skills": [
+      "S3"
+    ],
+    "item_family": "linear_map_axioms",
+    "annotation_rationale": "Identify preserved vector-space operations."
+  },
+  {
+    "id": "4e75afbb-c29c-4667-a3d7-6f2eb958f957",
+    "question": "What mathematical concept is represented by matrices and is essential for understanding transformations in vector spaces?",
+    "options": {
+      "A": "Algebraic Structures",
+      "B": "Linear Transformations",
+      "C": "Differential Equations",
+      "D": "Nonlinear Functions"
+    },
+    "correct_answer_key": "B",
+    "source_file": "generated_qa_pairs_level_1.json",
+    "source_row_zero_based": 114,
+    "source_type": "multi_hop_path_mcq",
+    "complexity": 1,
+    "source_nodes": [
+      {
+        "name": "matrix theory",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "linear transformations",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "REPRESENTS"
+    ],
+    "skills": [
+      "S2",
+      "S3"
+    ],
+    "item_family": "matrix_representation",
+    "annotation_rationale": "Relate a matrix representation to a linear transformation."
+  },
+  {
+    "id": "ed8a97b9-152d-45b8-ab2c-4cbe88ac0f16",
+    "question": "Which branch of mathematics focuses on the study of matrices and their applications, including linear transformations?",
+    "options": {
+      "A": "Algebra",
+      "B": "Geometry",
+      "C": "Matrix Theory",
+      "D": "Calculus"
+    },
+    "correct_answer_key": "C",
+    "source_file": "generated_qa_pairs_level_1.json",
+    "source_row_zero_based": 115,
+    "source_type": "multi_hop_path_mcq_reverse",
+    "complexity": 1,
+    "source_nodes": [
+      {
+        "name": "matrix theory",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "linear transformations",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "REPRESENTS"
+    ],
+    "skills": [
+      "S2"
+    ],
+    "item_family": "matrix_representation",
+    "annotation_rationale": "Recognize matrix theory in the context of transformations."
+  },
+  {
+    "id": "96ad18ea-a8f0-4cdb-9aaa-a0911c446189",
+    "question": "What mathematical concept is a fundamental part of linear algebra and is used to represent linear transformations and solve systems of equations?",
+    "options": {
+      "A": "Scalars",
+      "B": "Vectors",
+      "C": "Matrices",
+      "D": "Functions"
+    },
+    "correct_answer_key": "C",
+    "source_file": "generated_qa_pairs_level_1.json",
+    "source_row_zero_based": 120,
+    "source_type": "multi_hop_path_mcq",
+    "complexity": 1,
+    "source_nodes": [
+      {
+        "name": "linear algebra",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "matrices",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "INCLUDES"
+    ],
+    "skills": [
+      "S2"
+    ],
+    "item_family": "matrix_applications",
+    "annotation_rationale": "Identify matrices by their applications."
+  },
+  {
+    "id": "31f6a676-cd94-4657-8d4e-031b58ea799d",
+    "question": "Which key concept in linear algebra involves the arrangement of numbers in rows and columns?",
+    "options": {
+      "A": "Vectors",
+      "B": "Matrices",
+      "C": "Scalars",
+      "D": "Tensors"
+    },
+    "correct_answer_key": "B",
+    "source_file": "generated_qa_pairs.json",
+    "source_row_zero_based": 370,
+    "source_type": "multi_hop_path_mcq_reverse",
+    "complexity": 3,
+    "source_nodes": [
+      {
+        "name": "matrices",
+        "fact_checked": "No"
+      },
+      {
+        "name": "linear algebra",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "mathematics",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "quantities",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "ARE_KEY_CONCEPTS_IN",
+      "IS_A_BRANCH_OF",
+      "DEALS_WITH"
+    ],
+    "skills": [
+      "S2"
+    ],
+    "item_family": "matrix_definition",
+    "annotation_rationale": "Recognize the row-and-column structure; source node flag No, elementary answer manually checked."
+  },
+  {
+    "id": "4ed5abc3-7a51-4df2-a5e0-aa6487b4d2a9",
+    "question": "What mathematical concept does Cramer's Rule utilize to solve systems of linear equations?",
+    "options": {
+      "A": "Eigenvalues",
+      "B": "Determinants",
+      "C": "Linear Transformations",
+      "D": "Matrix Inversion"
+    },
+    "correct_answer_key": "B",
+    "source_file": "generated_qa_pairs_level_1.json",
+    "source_row_zero_based": 124,
+    "source_type": "multi_hop_path_mcq",
+    "complexity": 1,
+    "source_nodes": [
+      {
+        "name": "cramer's rule",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "determinants",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "UTILIZES"
+    ],
+    "skills": [
+      "S4",
+      "S6"
+    ],
+    "item_family": "cramer",
+    "annotation_rationale": "Recognize determinants as used in Cramer’s rule."
+  },
+  {
+    "id": "87332632-bd80-4f72-b9e1-b54b036d77a9",
+    "question": "Which theorem in linear algebra utilizes determinants to solve systems of linear equations with a unique solution?",
+    "options": {
+      "A": "Gaussian Elimination",
+      "B": "Matrix Inversion",
+      "C": "Cramer's Rule",
+      "D": "Eigenvalue Theorem"
+    },
+    "correct_answer_key": "C",
+    "source_file": "generated_qa_pairs_level_1.json",
+    "source_row_zero_based": 125,
+    "source_type": "multi_hop_path_mcq_reverse",
+    "complexity": 1,
+    "source_nodes": [
+      {
+        "name": "cramer's rule",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "determinants",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "UTILIZES"
+    ],
+    "skills": [
+      "S4",
+      "S6"
+    ],
+    "item_family": "cramer",
+    "annotation_rationale": "Recognize Cramer’s rule from its determinant-based solution method."
+  },
+  {
+    "id": "1fa94db3-9420-461a-8133-0bcab0671414",
+    "question": "What theorem is utilized to solve systems of linear equations by expressing solutions in terms of determinants?",
+    "options": {
+      "A": "Gaussian Elimination",
+      "B": "Cramer's Rule",
+      "C": "Matrix Inversion",
+      "D": "Linear Independence"
+    },
+    "correct_answer_key": "B",
+    "source_file": "generated_qa_pairs_level_1.json",
+    "source_row_zero_based": 182,
+    "source_type": "multi_hop_path_mcq",
+    "complexity": 1,
+    "source_nodes": [
+      {
+        "name": "cramer's rule",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "solve systems of linear equations",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "IS_USED_TO"
+    ],
+    "skills": [
+      "S4",
+      "S6"
+    ],
+    "item_family": "cramer",
+    "annotation_rationale": "Equivalent determinant-based theorem; same family."
+  },
+  {
+    "id": "ae460c30-37ce-4658-80b3-86248a907ccf",
+    "question": "In the context of mathematics and algebra, particularly concerning linear algebra, what role do determinants play in relation to matrix properties and linear transformations?",
+    "options": {
+      "A": "They determine the number of solutions for any polynomial equation.",
+      "B": "They indicate the invertibility of matrices and characterize linear transformations.",
+      "C": "They are used exclusively in statistics for data analysis.",
+      "D": "They serve as a method for solving differential equations only."
+    },
+    "correct_answer_key": "B",
+    "source_file": "generated_qa_pairs_level_1.json",
+    "source_row_zero_based": 126,
+    "source_type": "multi_hop_path_mcq",
+    "complexity": 1,
+    "source_nodes": [
+      {
+        "name": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "determinants",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "INCLUDES"
+    ],
+    "skills": [
+      "S4"
+    ],
+    "item_family": "det_invertibility",
+    "annotation_rationale": "Recognize determinant–invertibility relation."
+  },
+  {
+    "id": "fd3840ee-461f-4bcd-a4fc-3f9202923ec0",
+    "question": "In the context of algebra, what mathematical concept is crucial for determining the invertibility of matrices and solving systems of linear equations?",
+    "options": {
+      "A": "Eigenvalues",
+      "B": "Determinants",
+      "C": "Polynomials",
+      "D": "Functions"
+    },
+    "correct_answer_key": "B",
+    "source_file": "generated_qa_pairs_level_1.json",
+    "source_row_zero_based": 127,
+    "source_type": "multi_hop_path_mcq",
+    "complexity": 1,
+    "source_nodes": [
+      {
+        "name": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "determinants",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "UTILIZES"
+    ],
+    "skills": [
+      "S4"
+    ],
+    "item_family": "det_invertibility",
+    "annotation_rationale": "Recognize determinants from their invertibility role."
+  },
+  {
+    "id": "13626cee-ed9b-4605-a5d8-c8ade2489bee",
+    "question": "Which mathematical concept is essential for understanding the properties of linear transformations and is a key topic within the study of linear algebra?",
+    "options": {
+      "A": "Eigenvalues",
+      "B": "Derivatives",
+      "C": "Probability",
+      "D": "Integration"
+    },
+    "correct_answer_key": "A",
+    "source_file": "generated_qa_pairs_level_1.json",
+    "source_row_zero_based": 128,
+    "source_type": "multi_hop_path_mcq",
+    "complexity": 1,
+    "source_nodes": [
+      {
+        "name": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "eigenvalues",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "INCLUDES"
+    ],
+    "skills": [
+      "S5"
+    ],
+    "item_family": "eigenvalue",
+    "annotation_rationale": "Recognize eigenvalues in a transformation context; weak diagnostic specificity."
+  },
+  {
+    "id": "ddc448d2-a566-48f6-85e6-718c5bf0005f",
+    "question": "Which key concept in linear algebra is associated with scalar values that represent the action of a matrix on a vector?",
+    "options": {
+      "A": "Determinants",
+      "B": "Eigenvalues",
+      "C": "Matrix inverses",
+      "D": "Linear transformations"
+    },
+    "correct_answer_key": "B",
+    "source_file": "generated_qa_pairs.json",
+    "source_row_zero_based": 626,
+    "source_type": "multi_hop_path_mcq_reverse",
+    "complexity": 3,
+    "source_nodes": [
+      {
+        "name": "eigenvalues",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "linear algebra",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "mathematics",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "calculus",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "ARE_KEY_CONCEPTS_IN",
+      "IS_A_BRANCH_OF",
+      "CAN_BE_DIVIDED_INTO"
+    ],
+    "skills": [
+      "S5"
+    ],
+    "item_family": "eigenvalue",
+    "annotation_rationale": "Recognize eigenvalues as scalar factors."
+  },
+  {
+    "id": "796dac23-c09a-4b75-956c-11f5368b5cb4",
+    "question": "In the field of linear algebra, which mathematical concept is defined as non-zero vectors that result in a scalar multiple of themselves when a linear transformation is applied?",
+    "options": {
+      "A": "Scalars",
+      "B": "Matrices",
+      "C": "Eigenvectors",
+      "D": "Vectors"
+    },
+    "correct_answer_key": "C",
+    "source_file": "generated_qa_pairs_level_1.json",
+    "source_row_zero_based": 131,
+    "source_type": "multi_hop_path_mcq",
+    "complexity": 1,
+    "source_nodes": [
+      {
+        "name": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "eigenvectors",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "INCLUDES"
+    ],
+    "skills": [
+      "S5"
+    ],
+    "item_family": "eigenvector",
+    "annotation_rationale": "Recognize definition of an eigenvector."
+  },
+  {
+    "id": "a77a6a89-673c-4eae-a95e-7da494e088fa",
+    "question": "In linear algebra, which special vectors are associated with a linear transformation represented by a matrix and satisfy the equation \\( A \\mathbf{v} = \\lambda \\mathbf{v} \\)?",
+    "options": {
+      "A": "Matrices",
+      "B": "Eigenvalues",
+      "C": "Eigenvectors",
+      "D": "Scalars"
+    },
+    "correct_answer_key": "C",
+    "source_file": "generated_qa_pairs.json",
+    "source_row_zero_based": 172,
+    "source_type": "multi_hop_path_mcq_reverse",
+    "complexity": 3,
+    "source_nodes": [
+      {
+        "name": "eigenvectors",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "linear algebra",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "mathematics",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "abstract concepts",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "ARE_KEY_CONCEPTS_IN",
+      "IS_A_BRANCH_OF",
+      "INVOLVES"
+    ],
+    "skills": [
+      "S5"
+    ],
+    "item_family": "eigenvector",
+    "annotation_rationale": "Recognize the eigenvector equation."
+  },
+  {
+    "id": "b29d28e7-cdeb-49a2-a852-23144d57ca03",
+    "question": "What is the significance of the properties of matrices in relation to solving systems of linear equations?",
+    "options": {
+      "A": "They are not related.",
+      "B": "They provide methods for finding solutions.",
+      "C": "They only apply to geometric transformations.",
+      "D": "They are used exclusively in computer graphics."
+    },
+    "correct_answer_key": "B",
+    "source_file": "generated_qa_pairs_level_1.json",
+    "source_row_zero_based": 197,
+    "source_type": "multi_hop_path_mcq",
+    "complexity": 1,
+    "source_nodes": [
+      {
+        "name": "properties of matrices",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "solving systems of linear equations",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "ARE_CRUCIAL_FOR"
+    ],
+    "skills": [
+      "S2",
+      "S6"
+    ],
+    "item_family": "matrix_systems",
+    "annotation_rationale": "Recognize role of matrix properties in solving linear systems; coarse conceptual item."
+  },
+  {
+    "id": "9ca9b50f-21f0-46a9-9412-875d88c51ced",
+    "question": "Which mathematical techniques are primarily used to solve systems of linear equations in structural analysis, as discussed in the context of mathematics and algebra?",
+    "options": {
+      "A": "Differential Equations",
+      "B": "Matrix Methods",
+      "C": "Statistical Analysis",
+      "D": "Calculus Techniques"
+    },
+    "correct_answer_key": "B",
+    "source_file": "generated_qa_pairs_level_1.json",
+    "source_row_zero_based": 225,
+    "source_type": "multi_hop_path_mcq",
+    "complexity": 1,
+    "source_nodes": [
+      {
+        "name": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+        "fact_checked": "Yes"
+      },
+      {
+        "name": "matrix methods",
+        "fact_checked": "Yes"
+      }
+    ],
+    "source_relationships": [
+      "SOLVES_SYSTEM_OF_EQUATIONS"
+    ],
+    "skills": [
+      "S6"
+    ],
+    "item_family": "matrix_methods",
+    "annotation_rationale": "Identify matrix methods for solving linear systems in an application."
+  }
+]
