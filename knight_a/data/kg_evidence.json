@@ -1,0 +1,472 @@
+[
+  {
+    "source_file": "records.json",
+    "source_row_zero_based": 65,
+    "source": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+    "relation": "ARE_KEY_CONCEPTS_IN",
+    "target": "linear algebra",
+    "source_node_identity": 12,
+    "target_node_identity": 337,
+    "relationship_identity": 6918522986152591697
+  },
+  {
+    "source_file": "records.json",
+    "source_row_zero_based": 78,
+    "source": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+    "relation": "CAN_BE_ADDED_MULTIPLIED_AND_INVERTED",
+    "target": "systems of equations",
+    "source_node_identity": 12,
+    "target_node_identity": 578,
+    "relationship_identity": 6918571364664214082
+  },
+  {
+    "source_file": "records.json",
+    "source_row_zero_based": 429,
+    "source": "linear algebra",
+    "relation": "IS_A",
+    "target": "branch of mathematics",
+    "source_node_identity": 337,
+    "target_node_identity": 188,
+    "relationship_identity": 1152935798258008401
+  },
+  {
+    "source_file": "records.json",
+    "source_row_zero_based": 430,
+    "source": "linear algebra",
+    "relation": "FOCUSES_ON",
+    "target": "vector spaces and linear mappings",
+    "source_node_identity": 337,
+    "target_node_identity": 344,
+    "relationship_identity": 1153102924025430353
+  },
+  {
+    "source_file": "records.json",
+    "source_row_zero_based": 431,
+    "source": "linear algebra",
+    "relation": "DEALS_WITH",
+    "target": "vector spaces",
+    "source_node_identity": 337,
+    "target_node_identity": 374,
+    "relationship_identity": 1153447071164924241
+  },
+  {
+    "source_file": "records.json",
+    "source_row_zero_based": 432,
+    "source": "linear algebra",
+    "relation": "IS_A_BRANCH_OF",
+    "target": "mathematics",
+    "source_node_identity": 337,
+    "target_node_identity": 13,
+    "relationship_identity": 1153581211583512913
+  },
+  {
+    "source_file": "records.json",
+    "source_row_zero_based": 441,
+    "source": "matrices",
+    "relation": "ARE_KEY_CONCEPTS_IN",
+    "target": "linear algebra",
+    "source_node_identity": 349,
+    "target_node_identity": 337,
+    "relationship_identity": 1153915463118356829
+  },
+  {
+    "source_file": "records.json",
+    "source_row_zero_based": 442,
+    "source": "matrices",
+    "relation": "CAN_BE_ADDED_MULTIPLIED_AND_INVERTED",
+    "target": "systems of equations",
+    "source_node_identity": 349,
+    "target_node_identity": 578,
+    "relationship_identity": 1153963841629978973
+  },
+  {
+    "source_file": "records.json",
+    "source_row_zero_based": 466,
+    "source": "determinants",
+    "relation": "ARE_KEY_CONCEPTS_IN",
+    "target": "linear algebra",
+    "source_node_identity": 366,
+    "target_node_identity": 337,
+    "relationship_identity": 1153915463118356846
+  },
+  {
+    "source_file": "records.json",
+    "source_row_zero_based": 484,
+    "source": "vector spaces",
+    "relation": "IS_DEFINED_AS",
+    "target": "set of elements called vectors",
+    "source_node_identity": 374,
+    "target_node_identity": 412,
+    "relationship_identity": 1153233765909135734
+  },
+  {
+    "source_file": "records.json",
+    "source_row_zero_based": 485,
+    "source": "vector spaces",
+    "relation": "CAN_BE_COMBINED_THROUGH",
+    "target": "vector addition",
+    "source_node_identity": 374,
+    "target_node_identity": 411,
+    "relationship_identity": 1153927557746262390
+  },
+  {
+    "source_file": "records.json",
+    "source_row_zero_based": 486,
+    "source": "vector spaces",
+    "relation": "CAN_BE_COMBINED_THROUGH",
+    "target": "vector addition and scalar multiplication",
+    "source_node_identity": 374,
+    "target_node_identity": 430,
+    "relationship_identity": 1156179357559947638
+  },
+  {
+    "source_file": "records.json",
+    "source_row_zero_based": 497,
+    "source": "eigenvalues",
+    "relation": "ARE_KEY_CONCEPTS_IN",
+    "target": "linear algebra",
+    "source_node_identity": 399,
+    "target_node_identity": 337,
+    "relationship_identity": 1153915463118356879
+  },
+  {
+    "source_file": "records.json",
+    "source_row_zero_based": 499,
+    "source": "eigenvectors",
+    "relation": "ARE_KEY_CONCEPTS_IN",
+    "target": "linear algebra",
+    "source_node_identity": 402,
+    "target_node_identity": 337,
+    "relationship_identity": 1153915463118356882
+  },
+  {
+    "source_file": "records.json",
+    "source_row_zero_based": 584,
+    "source": "cramer's rule",
+    "relation": "IS_USED_TO",
+    "target": "solve systems of linear equations using determinants",
+    "source_node_identity": 480,
+    "target_node_identity": 489,
+    "relationship_identity": 1153869283629990368
+  },
+  {
+    "source_file": "records.json",
+    "source_row_zero_based": 682,
+    "source": "systems of equations",
+    "relation": "INVOLVES",
+    "target": "multiple variables",
+    "source_node_identity": 578,
+    "target_node_identity": 598,
+    "relationship_identity": 1152947892885914178
+  },
+  {
+    "source_file": "records.json",
+    "source_row_zero_based": 683,
+    "source": "systems of equations",
+    "relation": "IS_DEFINED_AS",
+    "target": "finite set of equations",
+    "source_node_identity": 578,
+    "target_node_identity": 597,
+    "relationship_identity": 1153233765909135938
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 13,
+    "source": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+    "relation": "INCLUDES",
+    "target": "matrices",
+    "source_node_identity": 0,
+    "target_node_identity": 62,
+    "relationship_identity": 6917549918362009662
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 14,
+    "source": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+    "relation": "INCLUDES",
+    "target": "determinants",
+    "source_node_identity": 0,
+    "target_node_identity": 63,
+    "relationship_identity": 6917549918362009663
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 15,
+    "source": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+    "relation": "INCLUDES",
+    "target": "eigenvalues",
+    "source_node_identity": 0,
+    "target_node_identity": 64,
+    "relationship_identity": 6917549918362009664
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 16,
+    "source": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+    "relation": "INCLUDES",
+    "target": "eigenvectors",
+    "source_node_identity": 0,
+    "target_node_identity": 65,
+    "relationship_identity": 6917549918362009665
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 42,
+    "source": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+    "relation": "REPRESENTS",
+    "target": "linear transformations",
+    "source_node_identity": 0,
+    "target_node_identity": 61,
+    "relationship_identity": 6917676362199203901
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 44,
+    "source": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+    "relation": "FOCUSES_ON",
+    "target": "linear mappings",
+    "source_node_identity": 0,
+    "target_node_identity": 45,
+    "relationship_identity": 6917710447059664941
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 45,
+    "source": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+    "relation": "FOCUSES_ON",
+    "target": "vector spaces",
+    "source_node_identity": 0,
+    "target_node_identity": 48,
+    "relationship_identity": 6917710447059664944
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 60,
+    "source": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+    "relation": "UTILIZES",
+    "target": "determinants",
+    "source_node_identity": 0,
+    "target_node_identity": 63,
+    "relationship_identity": 6918130460501475391
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 64,
+    "source": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+    "relation": "CONCERNS",
+    "target": "vector spaces",
+    "source_node_identity": 0,
+    "target_node_identity": 48,
+    "relationship_identity": 6918149152199147568
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 65,
+    "source": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+    "relation": "CONCERNS",
+    "target": "linear transformations",
+    "source_node_identity": 0,
+    "target_node_identity": 61,
+    "relationship_identity": 6918149152199147581
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 73,
+    "source": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+    "relation": "ARE_CRUCIAL_FOR",
+    "target": "solving systems of linear equations",
+    "source_node_identity": 0,
+    "target_node_identity": 93,
+    "relationship_identity": 6918417433036324957
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 85,
+    "source": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+    "relation": "RELIES_ON",
+    "target": "linear algebra",
+    "source_node_identity": 0,
+    "target_node_identity": 44,
+    "relationship_identity": 6918475707152597036
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 87,
+    "source": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+    "relation": "IS_USED_TO",
+    "target": "solve systems of linear equations",
+    "source_node_identity": 0,
+    "target_node_identity": 90,
+    "relationship_identity": 6918476806664224858
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 90,
+    "source": "explain \"mathematics & algebra\" in depth academically. cover their definitions, scope, subfields, key concepts/theorems, applications, examples, related fields, and current trends. provide a comprehensive, detailed, and rigorous breakdown for someone unfamiliar with these subjects.",
+    "relation": "SOLVES_SYSTEM_OF_EQUATIONS",
+    "target": "matrix methods",
+    "source_node_identity": 0,
+    "target_node_identity": 108,
+    "relationship_identity": 6918479005687480428
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 151,
+    "source": "linear algebra",
+    "relation": "IS_USED_IN",
+    "target": "neural networks",
+    "source_node_identity": 44,
+    "target_node_identity": 120,
+    "relationship_identity": 1152934698746380332
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 152,
+    "source": "linear algebra",
+    "relation": "IS_USED_IN",
+    "target": "dimensionality reduction techniques",
+    "source_node_identity": 44,
+    "target_node_identity": 124,
+    "relationship_identity": 6919794021594300540
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 153,
+    "source": "linear algebra",
+    "relation": "INCLUDES",
+    "target": "matrices",
+    "source_node_identity": 44,
+    "target_node_identity": 62,
+    "relationship_identity": 1152942395327774764
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 154,
+    "source": "linear algebra",
+    "relation": "INCLUDES",
+    "target": "determinants",
+    "source_node_identity": 44,
+    "target_node_identity": 63,
+    "relationship_identity": 1155194195141460012
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 155,
+    "source": "linear algebra",
+    "relation": "INCLUDES",
+    "target": "eigenvalues",
+    "source_node_identity": 44,
+    "target_node_identity": 64,
+    "relationship_identity": 1157445994955145260
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 156,
+    "source": "linear algebra",
+    "relation": "INCLUDES",
+    "target": "eigenvectors",
+    "source_node_identity": 44,
+    "target_node_identity": 65,
+    "relationship_identity": 1159697794768830508
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 157,
+    "source": "linear algebra",
+    "relation": "FOCUSES_ON",
+    "target": "linear mappings",
+    "source_node_identity": 44,
+    "target_node_identity": 45,
+    "relationship_identity": 1153102924025430060
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 158,
+    "source": "linear algebra",
+    "relation": "FOCUSES_ON",
+    "target": "vector spaces",
+    "source_node_identity": 44,
+    "target_node_identity": 48,
+    "relationship_identity": 1155354723839115308
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 159,
+    "source": "linear algebra",
+    "relation": "CONCERNS",
+    "target": "vector spaces",
+    "source_node_identity": 44,
+    "target_node_identity": 48,
+    "relationship_identity": 1153541629164912684
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 160,
+    "source": "linear algebra",
+    "relation": "CONCERNS",
+    "target": "linear transformations",
+    "source_node_identity": 44,
+    "target_node_identity": 61,
+    "relationship_identity": 1155793428978597932
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 161,
+    "source": "linear algebra",
+    "relation": "SOLVES_SYSTEM_OF_EQUATIONS",
+    "target": "matrix methods",
+    "source_node_identity": 44,
+    "target_node_identity": 108,
+    "relationship_identity": 1153871482653245484
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 187,
+    "source": "matrix theory",
+    "relation": "REPRESENTS",
+    "target": "linear transformations",
+    "source_node_identity": 82,
+    "target_node_identity": 61,
+    "relationship_identity": 1153068839164969042
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 188,
+    "source": "properties of matrices",
+    "relation": "ARE_CRUCIAL_FOR",
+    "target": "solving systems of linear equations",
+    "source_node_identity": 83,
+    "target_node_identity": 93,
+    "relationship_identity": 1153809910002090067
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 189,
+    "source": "cramer's rule",
+    "relation": "UTILIZES",
+    "target": "determinants",
+    "source_node_identity": 84,
+    "target_node_identity": 63,
+    "relationship_identity": 1153522937467240532
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 190,
+    "source": "cramer's rule",
+    "relation": "IS_USED_TO",
+    "target": "solve systems of linear equations",
+    "source_node_identity": 84,
+    "target_node_identity": 90,
+    "relationship_identity": 1153869283629989972
+  },
+  {
+    "source_file": "records(1).json",
+    "source_row_zero_based": 197,
+    "source": "machine learning",
+    "relation": "RELIES_ON",
+    "target": "linear algebra",
+    "source_node_identity": 97,
+    "target_node_identity": 44,
+    "relationship_identity": 1153868184118362209
+  }
+]
