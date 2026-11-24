@@ -1,0 +1,31 @@
+{
+  "source_sha256": {
+    "generated_qa_pairs_level_1.json": "fd9816f654271cdb864a3b08b52f9ecd71b230f59ddfa3754cd4750ab95a65ee",
+    "generated_qa_pairs.json": "8c8f78b0f9cf3497ae8694549c89a68c5924b679e2e531949567f182921f38e7",
+    "records.json": "67616df680fc42eb38e40f85285cfb7afc1c37b9a6700e640045f65f6dd944d2",
+    "records(1).json": "5ab9dcac55fed2211c91109f536b71fe9867f12132965df64e2e24aab1ecd0fd"
+  },
+  "question_counts": {
+    "generated_qa_pairs_level_1.json": 298,
+    "generated_qa_pairs.json": 1572
+  },
+  "cross_file_id_overlap": 0,
+  "graph_exports": [
+    {
+      "file": "records.json",
+      "records": 862,
+      "unique_nodes": 628,
+      "unique_relationships": 862,
+      "invalid_escape_repairs": 8253
+    },
+    {
+      "file": "records(1).json",
+      "records": 223,
+      "unique_nodes": 128,
+      "unique_relationships": 223,
+      "invalid_escape_repairs": 4529
+    }
+  ],
+  "selected_items": 20,
+  "source_node_flags_note": "Preserved exactly; not independent validation. Selected row 370 has a No node flag but simple definition is checked by curator. Graph files parsed after minimal invalid backslash repair, raw files unchanged. Native Neo4j dumps and SVGs not needed for this reproducible extraction."
+}
