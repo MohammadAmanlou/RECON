@@ -25,3 +25,7 @@ This regenerates full fit, per-world records, histories and the original plot. T
 
 ## Evidence boundary
 All responses are synthetic. The original questions are conceptual recognition items, not a validated mastery instrument. Candidate edges and tags are curator hypotheses. Hyperedge IG improves primary Hamming and Brier relative to pairwise IG under mismatch, but does not improve exact recovery or time to first exact recovery and is not superior in noisy worlds. The mixture is exploratory/secondary, not structure discovery. See PLAN.md for the full scope and future validation. Do not interpret as a human study or a general proof of novelty.
+
+## New exploratory extension — WARP
+
+The [WARP research extension](warp/README.md) is separate from the frozen eight-question pilot: [focused plan draft](warp/PLAN_WARP.md), [theory and limitations](warp/THEORY.md), [two-question interactive demo](warp/demo.html), [executed benchmark plot](warp/benchmark.svg), [world-level results](warp/results.json). The extension does not establish universal hypergraph superiority or human mastery certification. Run `node knight_a/warp/test_warp.cjs` for its numerical checks.
