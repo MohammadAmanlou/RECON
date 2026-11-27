@@ -1,0 +1,120 @@
+{
+  "delta": 0.4,
+  "interpretation": "maximum nonadaptive bundle total variation between uniform +/- parity perturbations; common fixed item response model; not a measure of causal prerequisite validity",
+  "output": [
+    {
+      "depth": 1,
+      "bundles": 20,
+      "best": [
+        {
+          "mask": 7,
+          "tv": 0,
+          "questions": [
+            "13626cee-ed9b-4605-a5d8-c8ade2489bee"
+          ]
+        },
+        {
+          "mask": 10,
+          "tv": 0,
+          "questions": [
+            "13626cee-ed9b-4605-a5d8-c8ade2489bee"
+          ]
+        },
+        {
+          "mask": 22,
+          "tv": 0,
+          "questions": [
+            "13626cee-ed9b-4605-a5d8-c8ade2489bee"
+          ]
+        },
+        {
+          "mask": 42,
+          "tv": 0,
+          "questions": [
+            "13626cee-ed9b-4605-a5d8-c8ade2489bee"
+          ]
+        }
+      ]
+    },
+    {
+      "depth": 2,
+      "bundles": 179,
+      "best": [
+        {
+          "mask": 7,
+          "tv": 0.0845,
+          "questions": [
+            "199d273f-2b49-4d93-a0a2-6b2b15c1b7ef",
+            "4e75afbb-c29c-4667-a3d7-6f2eb958f957"
+          ]
+        },
+        {
+          "mask": 10,
+          "tv": 0.169,
+          "questions": [
+            "31f6a676-cd94-4657-8d4e-031b58ea799d",
+            "ae460c30-37ce-4658-80b3-86248a907ccf"
+          ]
+        },
+        {
+          "mask": 22,
+          "tv": 0.0845,
+          "questions": [
+            "13626cee-ed9b-4605-a5d8-c8ade2489bee",
+            "4e75afbb-c29c-4667-a3d7-6f2eb958f957"
+          ]
+        },
+        {
+          "mask": 42,
+          "tv": 0.0845,
+          "questions": [
+            "1fa94db3-9420-461a-8133-0bcab0671414",
+            "31f6a676-cd94-4657-8d4e-031b58ea799d"
+          ]
+        }
+      ]
+    },
+    {
+      "depth": 3,
+      "bundles": 946,
+      "best": [
+        {
+          "mask": 7,
+          "tv": 0.10985,
+          "questions": [
+            "15a990d5-dc9b-434e-b263-a9e131663462",
+            "199d273f-2b49-4d93-a0a2-6b2b15c1b7ef",
+            "31f6a676-cd94-4657-8d4e-031b58ea799d"
+          ]
+        },
+        {
+          "mask": 10,
+          "tv": 0.17745,
+          "questions": [
+            "31f6a676-cd94-4657-8d4e-031b58ea799d",
+            "96ad18ea-a8f0-4cdb-9aaa-a0911c446189",
+            "ae460c30-37ce-4658-80b3-86248a907ccf"
+          ]
+        },
+        {
+          "mask": 22,
+          "tv": 0.10985,
+          "questions": [
+            "13626cee-ed9b-4605-a5d8-c8ade2489bee",
+            "15a990d5-dc9b-434e-b263-a9e131663462",
+            "31f6a676-cd94-4657-8d4e-031b58ea799d"
+          ]
+        },
+        {
+          "mask": 42,
+          "tv": 0.10985,
+          "questions": [
+            "31f6a676-cd94-4657-8d4e-031b58ea799d",
+            "9ca9b50f-21f0-46a9-9412-875d88c51ced",
+            "ae460c30-37ce-4658-80b3-86248a907ccf"
+          ]
+        }
+      ]
+    }
+  ]
+}
