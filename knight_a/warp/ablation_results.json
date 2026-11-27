@@ -1,0 +1,26 @@
+[
+  {
+    "depth": 1,
+    "risk": 0.34326691688092115,
+    "denseNodes": 41,
+    "densePrunedNodes": 15,
+    "spectralPrunedNodes": 15,
+    "spectralUnprunedNodes": 41,
+    "rootMoments": 32,
+    "fullStates": 64,
+    "spectralUnprunedMomentReads": 312,
+    "denseStateEntries": 2624
+  },
+  {
+    "depth": 2,
+    "risk": 0.2817403873948018,
+    "denseNodes": 1473,
+    "densePrunedNodes": 461,
+    "spectralPrunedNodes": 461,
+    "spectralUnprunedNodes": 1473,
+    "rootMoments": 56,
+    "fullStates": 64,
+    "spectralUnprunedMomentReads": 11326,
+    "denseStateEntries": 94272
+  }
+]
