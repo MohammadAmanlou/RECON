@@ -1,3 +1,9 @@
+# Direction A delivery — 27 November 2026
+
+The current handoff is [KNIGHT-A v1.1](knight_a/README.md), the focused learner-profile-aware adaptive assessment continuation. Historical RECON-Ω material is preserved below.
+
+---
+
 # RECON-Ω: Interventional Competence Hypergraph Discovery
 
 [![Research stage](https://img.shields.io/badge/stage-synthetic--pilot-blue)](#evidence-boundary)

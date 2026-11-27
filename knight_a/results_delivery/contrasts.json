@@ -1,0 +1,41 @@
+{
+  "source": "27 Nov numerical replay, rounded; columns mean, CI lower, CI upper; positive favors compared method; independent world bootstrap",
+  "contrasts": {
+    "matched": {
+      "hyperedge": [
+        0.0055,
+        -0.0004166667,
+        0.0111666667
+      ],
+      "mixture": [
+        0.01125,
+        0.0063333333,
+        0.0163333333
+      ]
+    },
+    "noisy": {
+      "hyperedge": [
+        -0.0006666667,
+        -0.0054166667,
+        0.0045
+      ],
+      "mixture": [
+        0.0005,
+        -0.0058333333,
+        0.0068333333
+      ]
+    },
+    "mismatch": {
+      "hyperedge": [
+        0.0079166667,
+        0.0015833333,
+        0.0138333333
+      ],
+      "mixture": [
+        0.0071666667,
+        -0.00075,
+        0.0144166667
+      ]
+    }
+  }
+}
